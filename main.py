@@ -1,4 +1,4 @@
-import Neuron
+from Layer import Layer
 
-n = Neuron.Neuron(2)
-print(n.activation([1, 0.5]))
+layer = Layer(3, 2)
+print(layer.layer_output([1, 0.5]))
