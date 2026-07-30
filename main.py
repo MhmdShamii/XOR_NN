@@ -1,4 +1,4 @@
-from Layer import Layer
+from Network import Network
 
-layer = Layer(3, 2)
-print(layer.layer_output([1, 0.5]))
+net = Network(2, [4, 1])
+print(net.forward_propagation([1, 0]))
