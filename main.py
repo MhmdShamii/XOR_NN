@@ -1,5 +1,6 @@
 from Network import Network
 from helpers import loss_MSE,blame
+
 input_data = [[1, 1],[1, 0],[0, 1],[0, 0]]
 target_output = [1, 0, 0, 1]
 
