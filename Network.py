@@ -1,7 +1,11 @@
 from Layer import Layer
+from helpers import blame
 
 
-class Network: 
+class Network:
+
+    _network_output = None
+
     def __init__(self, input_size:int, layers_sizes:list):
         self.input_layer_size = input_size
         self.num_of_layers = len(layers_sizes)
@@ -22,5 +26,14 @@ class Network:
         for layers in self.network_layers:
             current_outputs = layers.layer_output(current_outputs)
 
-        return current_outputs
+        self._network_output = current_outputs
+        return self._network_output
+
+    def back_propagation(self, y_true):
+        
+        output_blame = blame(self._network_output[0], y_true)
+
+        for layer in self.network_layers[::-1]:
+            for neuron in layer.layer_neurons:
+                ...
 
