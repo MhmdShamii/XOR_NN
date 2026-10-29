@@ -1,4 +1,4 @@
-from Neuron import Neuron
+from .Neuron import Neuron
 
 class Layer: 
     def __init__(self, num_of_neurons, inputs_per_neuron):

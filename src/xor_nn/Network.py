@@ -1,5 +1,5 @@
-from Layer import Layer
-from helpers import blame
+from .Layer import Layer
+from .helpers import blame
 
 
 class Network:

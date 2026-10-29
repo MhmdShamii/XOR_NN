@@ -1,6 +1,6 @@
 import random
 
-from helpers import sigmoid
+from .helpers import sigmoid
 
 
 class Neuron:
